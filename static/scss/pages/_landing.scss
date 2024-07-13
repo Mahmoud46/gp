@@ -1,0 +1,224 @@
+@use "../tools/colors" as *;
+.main_header_menu {
+	display: flex;
+	position: absolute;
+	justify-content: space-between;
+	width: 80%;
+	align-items: center;
+	top: 20px;
+	z-index: 9999999999999999;
+	li {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		button {
+			padding: 10px 20px;
+			border-radius: 30px;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			font-weight: 500;
+			transition: 0.5s ease-in-out all;
+			&:first-child {
+				background: $secondary-dark;
+				color: rgba($color: $secondary-orange, $alpha: 0.7);
+				&:hover {
+					color: rgba($color: $secondary-orange, $alpha: 1);
+				}
+			}
+			&:last-child {
+				background: rgba($color: $secondary-orange, $alpha: 0.7);
+				color: $secondary-dark;
+				&:hover {
+					background: rgba($color: $secondary-orange, $alpha: 1);
+					color: $primary-dark;
+				}
+			}
+		}
+	}
+}
+
+.login_signup_window {
+	background: $secondary-orange;
+	position: absolute;
+	z-index: 999999999999999999999999999999;
+	background: rgba($color: $primary-dark, $alpha: 0.5);
+	backdrop-filter: blur(15px);
+	top: 50%;
+	left: 50%;
+	width: 0%;
+	height: 0%;
+	transition: 0.5s ease-in-out all;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&.active {
+		width: 100%;
+		height: 100%;
+	}
+	.cls_lgn_su_win {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		background: none;
+		border-radius: 20px;
+		outline: none;
+		border: none;
+		transition: 0.5s ease-in-out all;
+		span {
+			color: rgba($color: $secondary-orange, $alpha: 1);
+			transition: 0.5s ease-in-out all;
+
+			&.material-symbols-outlined {
+				font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+			}
+		}
+
+		&:hover {
+			background: $secondary-orange;
+			span {
+				color: rgba($color: $secondary-dark, $alpha: 1);
+				rotate: 90deg;
+				&.material-symbols-outlined {
+					font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+				}
+			}
+		}
+	}
+	.login_signup_field {
+		width: 400px;
+		height: 500px;
+		background: $secondary-dark;
+		position: relative;
+		overflow: hidden;
+		border-radius: 20px;
+		transition: 0.5s ease-in-out all;
+		&.lg {
+			height: 410px;
+		}
+		&.su {
+			height: 500px;
+		}
+		&.rs {
+			height: 420px;
+		}
+
+		.lg-su-field {
+			position: absolute;
+			width: 0;
+			height: 0;
+			overflow: hidden;
+			left: -100%;
+			transition: 0.5s ease-in-out left;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			&.active {
+				left: 0;
+				padding: 10px;
+				height: 100%;
+				width: 100%;
+			}
+			h1 {
+				color: $secondary-orange;
+				font-weight: 300;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				padding: 20px;
+				span {
+					font-size: 16px;
+					display: flex;
+					justify-content: space-between;
+					a {
+						cursor: pointer;
+						color: rgba($color: $secondary-orange, $alpha: 0.7);
+						transition: 0.5s ease-in-out all;
+						&:hover {
+							color: rgba($color: $secondary-orange, $alpha: 1);
+						}
+					}
+				}
+			}
+			.lg_form,
+			.su_form,
+			.rs_form {
+				display: flex;
+				flex-direction: column;
+				padding: 0 20px;
+				gap: 20px;
+				width: 100%;
+				.user_ip {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+					label {
+						display: flex;
+						justify-content: space-between;
+						font-size: 13px;
+						color: rgba($color: $secondary-orange, $alpha: 1);
+						a {
+							color: rgba($color: $secondary-orange, $alpha: 0.7);
+							transition: 0.5s ease-in-out all;
+							cursor: pointer;
+							&:hover {
+								color: rgba($color: $secondary-orange, $alpha: 1);
+							}
+						}
+					}
+					input {
+						padding: 10px 20px;
+						border-radius: 20px;
+						outline: none;
+						border: none;
+						transition: 0.5s ease-in-out all;
+						background: rgba($color: $primary-dark, $alpha: 0.2);
+						&::placeholder {
+							color: rgba($color: $secondary-orange, $alpha: 0.7);
+						}
+						color: rgba($color: $secondary-orange, $alpha: 1);
+						&:focus {
+							background: rgba($color: $primary-dark, $alpha: 0.5);
+						}
+					}
+				}
+				button {
+					padding: 10px;
+					border-radius: 20px;
+					outline: none;
+					border: none;
+					background: rgba($color: $secondary-orange, $alpha: 0.5);
+					cursor: pointer;
+					font-size: 15px;
+					color: rgba($color: $secondary-dark, $alpha: 1);
+					font-weight: normal;
+					transition: 0.5s ease-in-out all;
+					&:hover {
+						background: rgba($color: $secondary-orange, $alpha: 1);
+					}
+				}
+			}
+
+			.su_form {
+				.user_name {
+					display: flex;
+					gap: 10px;
+					.user_ip {
+						width: calc(50% - 5px);
+					}
+				}
+			}
+		}
+	}
+}

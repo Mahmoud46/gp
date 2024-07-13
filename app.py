@@ -11,6 +11,10 @@ app = Flask(__name__)
 def main():
     return render_template('user.html')
 
+@app.route('/user_verification_and_registration', methods=['GET','POST'])
+def user_verification_and_registration():
+    pass
+
 @app.route('/update_example_files',methods=['GET', 'POST'])
 def update_examples():
     if request.method == "POST":

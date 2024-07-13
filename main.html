@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./static/scss/style.css" />
+		<link
+			rel="shortcut icon"
+			href="./static/imgs/icons/fav_icon.svg"
+			type="image/x-icon"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+
+		<script
+			src="./static/scripts/js/plotlyjs/plotly-2.27.0.min.js"
+			charset="utf-8"
+		></script>
+		<title>Nexira</title>
+	</head>
+	<body>
+		<ul class="main_header_menu">
+			<li>
+				<img src="./static/imgs/icons/main_icon.svg" width="80px" alt="" />
+			</li>
+			<li>
+				<button class="login_btn">Login</button>
+				<button class="signup_btn">Sign Up</button>
+			</li>
+		</ul>
+		<div class="login_signup_window">
+			<div class="login_signup_field">
+				<div class="login_field lg-su-field">
+					<h1>
+						Login
+						<span>Doesn't have an account yet? <a href="#">Sign Up</a></span>
+					</h1>
+					<form class="lg_form">
+						<div class="user_ip user_email">
+							<label for="user_email">Email Address</label>
+							<input
+								type="email"
+								name=""
+								id="user_email"
+								placeholder="you@example.com"
+								required
+							/>
+						</div>
+						<div class="user_ip user_password">
+							<label for="user_password"
+								>Password <a href="#">Forgot Password?</a></label
+							>
+							<input
+								type="password"
+								name=""
+								id="user_password"
+								placeholder="Enter 6 characters or more"
+								minlength="6"
+								required
+							/>
+						</div>
+						<button id="submit_login_btn" type="submit">Login</button>
+					</form>
+				</div>
+				<div class="signup_field lg-su-field">
+					<h1>
+						Sign Up
+						<span>Already have an account? <a href="#">Login</a></span>
+					</h1>
+					<form class="su_form">
+						<div class="user_name">
+							<div class="user_ip su_first_name">
+								<label for="su_fst_name">First Name</label>
+								<input type="text" name="" id="su_fst_name" required />
+							</div>
+							<div class="user_ip su_lst_name">
+								<label for="su_lst_name">Last Name</label>
+								<input type="text" name="" id="su_lst_name" required />
+							</div>
+						</div>
+						<div class="user_ip user_email">
+							<label for="su_user_email">Email Address</label>
+							<input
+								type="email"
+								name=""
+								id="su_user_email"
+								placeholder="you@example.com"
+								required
+							/>
+						</div>
+						<div class="user_ip user_password">
+							<label for="su_user_password">Password</label>
+							<input
+								type="password"
+								name=""
+								id="su_user_password"
+								placeholder="Enter 6 characters or more"
+								minlength="6"
+								required
+							/>
+						</div>
+						<button id="submit_signup_btn" type="submit">Sign Up</button>
+					</form>
+				</div>
+				<div class="reset_password_field lg-su-field">
+					<h1>Reset Account Password</h1>
+					<form class="rs_form">
+						<div class="user_ip user_email">
+							<label for="rs_user_email">Email Address</label>
+							<input
+								type="email"
+								name=""
+								id="rs_user_email"
+								placeholder="you@example.com"
+								required
+							/>
+						</div>
+						<div class="user_ip user_password">
+							<label for="new_user_password">New Password</label>
+							<input
+								type="password"
+								name=""
+								id="new_user_password"
+								placeholder="Enter 6 characters or more"
+								minlength="6"
+								required
+							/>
+						</div>
+						<button id="submit_reset_password_btn" type="submit">
+							Reset Password
+						</button>
+					</form>
+				</div>
+
+				<button class="cls_lgn_su_win">
+					<span class="material-symbols-outlined"> close </span>
+				</button>
+			</div>
+		</div>
+
+		<script src="./static/scripts/js/landing_page.js"></script>
+	</body>
+</html>
