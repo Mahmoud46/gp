@@ -7,15 +7,18 @@
 		<link
 			rel="shortcut icon"
 			href="./static/imgs/icons/fav_icon.svg"
-			type="image/x-icon" />
+			type="image/x-icon"
+		/>
 
 		<link
 			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
 
 		<script
 			src="./static/scripts/js/plotlyjs/plotly-2.27.0.min.js"
-			charset="utf-8"></script>
+			charset="utf-8"
+		></script>
 
 		<title>Nexira</title>
 	</head>
@@ -82,7 +85,8 @@
 							<video loop muted playsinline autoplay>
 								<source
 									src="./static/videos/Untitled video - Made with Clipchamp.mp4"
-									type="video/mp4" />
+									type="video/mp4"
+								/>
 							</video>
 							<img src="./static/imgs/images/dell-xps-15.png" alt="" />
 						</div>
@@ -155,7 +159,8 @@
 							>
 							<span
 								title="Remove file"
-								class="material-symbols-outlined delete_file">
+								class="material-symbols-outlined delete_file"
+							>
 								delete
 							</span>
 						</div>
@@ -317,7 +322,8 @@
 							>
 							<span
 								title="Remove file"
-								class="material-symbols-outlined delete_file">
+								class="material-symbols-outlined delete_file"
+							>
 								delete
 							</span>
 						</div>
@@ -356,7 +362,8 @@
 						<div class="simulation_btns">
 							<button
 								title="Establish one more clinic"
-								id="simulate_two_clinics">
+								id="simulate_two_clinics"
+							>
 								Add. clinic
 							</button>
 							<button title="Establish booking system" id="try_booking_btn">
@@ -377,32 +384,37 @@
 									<button
 										data_type="mean_waiting_times"
 										data_title=" Waiting time (min.)"
-										class="active">
+										class="active"
+									>
 										<span class="material-symbols-outlined"> hourglass </span
 										>Waiting time
 									</button>
 									<button
 										data_type="mean_service_time"
-										data_title=" Service time (min.)">
+										data_title=" Service time (min.)"
+									>
 										<span class="material-symbols-outlined"> concierge </span
 										>Service time
 									</button>
 									<button
 										data_type="mean_number_of_patients"
-										data_title=" Number of patients">
+										data_title=" Number of patients"
+									>
 										<span class="material-symbols-outlined">
 											personal_injury </span
 										>Patients number
 									</button>
 									<button
 										data_type="total_time_of_service_min"
-										data_title="Clinic service time (min.)">
+										data_title="Clinic service time (min.)"
+									>
 										<span class="material-symbols-outlined"> timer </span
 										>Clinics Service time
 									</button>
 									<button
 										data_type="total_time_of_clinic_hrs"
-										data_title="Clinic service time (hrs)">
+										data_title="Clinic service time (hrs)"
+									>
 										<span class="material-symbols-outlined"> timelapse </span
 										>Clinics Duration
 									</button>
@@ -438,32 +450,37 @@
 								<button
 									data_type="mean_waiting_times"
 									data_title="Mean waiting time (min.)"
-									class="active">
+									class="active"
+								>
 									<span class="material-symbols-outlined"> hourglass </span
 									>Waiting time
 								</button>
 								<button
 									data_type="mean_service_time"
-									data_title="Mean service time (min.)">
+									data_title="Mean service time (min.)"
+								>
 									<span class="material-symbols-outlined"> concierge </span
 									>Service time
 								</button>
 								<button
 									data_type="mean_number_of_patients"
-									data_title="Mean number of patients">
+									data_title="Mean number of patients"
+								>
 									<span class="material-symbols-outlined">
 										personal_injury </span
 									>Patients number
 								</button>
 								<button
 									data_type="total_time_of_service_min"
-									data_title="Clinic service time (min.)">
+									data_title="Clinic service time (min.)"
+								>
 									<span class="material-symbols-outlined"> timer </span>Clinics
 									Service time
 								</button>
 								<button
 									data_type="total_time_of_clinic_hrs"
-									data_title="Clinic service time (hrs)">
+									data_title="Clinic service time (hrs)"
+								>
 									<span class="material-symbols-outlined"> timelapse </span
 									>Clinics Duration
 								</button>
@@ -521,7 +538,8 @@
 							>
 							<span
 								title="Remove file"
-								class="material-symbols-outlined delete_file">
+								class="material-symbols-outlined delete_file"
+							>
 								delete
 							</span>
 						</div>
@@ -622,7 +640,8 @@
 				<li
 					title="Show charts"
 					class="active ccw"
-					sec_type="control_charts_window">
+					sec_type="control_charts_window"
+				>
 					<i class="circle"></i>
 					<span class="material-symbols-outlined"> stacked_line_chart </span>
 				</li>
@@ -708,7 +727,7 @@
 					<span class="material-symbols-outlined"> person </span>
 					<span>Profile</span>
 				</li>
-				<li>
+				<li id="logout_btn">
 					<span class="material-symbols-outlined">logout</span>
 					<span>Logout</span>
 				</li>
@@ -732,6 +751,9 @@
 
 		<div class="loader"></div>
 
+		<script>
+			let username = "{{ user_name }}";
+		</script>
 		<script src="./static/scripts/js/user.js"></script>
 		<script src="./static/scripts/js/control_charts.js"></script>
 		<script src="./static/scripts/js/hospitals_comparison.js"></script>

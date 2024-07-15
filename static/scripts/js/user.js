@@ -2,6 +2,7 @@ let control_charts_workspace_opened = false,
 	hospital_comparison_workspace_opened = false,
 	outpatient_department_workspace_opened = false;
 
+GetUserData(username);
 // Main menu buttons activation
 document.querySelectorAll(".main-menu li").forEach((li) => {
 	li.addEventListener("click", (_) => {
@@ -85,6 +86,13 @@ document
 		document.querySelector(".user-menu").classList.toggle("active");
 		ActivateControlChartGraphMenu();
 	});
+
+// Logout
+document.getElementById("logout_btn").addEventListener("click", (_) => {
+	// window.location.href = `${window.origin}`;
+	// Optionally, close the current tab/window
+	window.close();
+});
 
 // Activate selected section when click main menu button
 function activateSection(sec_id) {
@@ -200,4 +208,41 @@ function ActivateControlChartGraphMenu() {
 		li.classList.contains("active") ? li.classList.remove("active") : null
 	);
 	control_charts_graph_menu_icon_list[0].classList.add("active");
+}
+
+function GetUserData(username) {
+	fetch(`${window.origin}/get_user_data`, {
+		method: "POST",
+		credentials: "include",
+		body: JSON.stringify({ username: username }),
+		cache: "no-cache",
+		headers: new Headers({
+			"content-type": "application/json",
+		}),
+	}).then((response) => {
+		if (response.status !== 200) {
+			console.log(`Response status was not 200: ${response.status}`);
+			alert(`Response status was not 200: ${response.status}`);
+			return;
+		}
+		response.json().then((data) => {
+			// console.log(data);
+			SpreadUserData(data["user_data"]);
+			return;
+		});
+	});
+}
+
+function SpreadUserData(user_data) {
+	let user_menu = document.querySelector(".user-menu"),
+		user_menu_det = document.querySelectorAll(".user-det span");
+	user_menu.querySelector(".user-icon").innerText = user_data.fst_name[0];
+
+	user_menu_det[0].innerText = `${user_data.fst_name} ${user_data.lst_name}`;
+	user_menu_det[1].innerText = user_data.username;
+
+	document.querySelector(".header_menu .user_btn span").innerText =
+		user_data.fst_name[0];
+
+	document.querySelector("#home_sec h1 span").innerText = user_data.fst_name;
 }

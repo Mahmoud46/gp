@@ -1,0 +1,30 @@
+[
+    {
+        "fst_name": "John",
+        "lst_name": "Doe",
+        "email": "johndoe@gmail.com",
+        "pswrd": "J0hn!D03#2@",
+        "username": "john.doe.191290712"
+    },
+    {
+        "fst_name": "Jane",
+        "lst_name": "Smith",
+        "email": "janesmith@yahoo.com",
+        "pswrd": "123456",
+        "username": "jane.smith.194644693"
+    },
+    {
+        "fst_name": "Michael",
+        "lst_name": "Johnson",
+        "email": "michael.johnson@hotmail.com",
+        "pswrd": "M!ch@3l#J0hns0n%",
+        "username": "michael.johnson.198629511"
+    },
+    {
+        "fst_name": "Emily",
+        "lst_name": "Davis",
+        "email": "emilydavis@gmail.com",
+        "pswrd": "3m!lyD@v!s#7*",
+        "username": "emily.davis.196224678"
+    }
+]

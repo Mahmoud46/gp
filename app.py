@@ -3,18 +3,49 @@ from storage_control import add_file_to_example_files,get_example_file,save_file
 from control_charts import ControlCharts
 from data_comparison import EntitiesComparison
 from outpatient_department import OutpatientDepartment
+from user_login import login_validate
+from user_signup import regestration_validation,user_regestration
+from user_data_control import get_user_data_by_username,reset_user_password
 import json
 
 app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return render_template('user.html')
+    return render_template('main.html')
 
-@app.route('/user_verification_and_registration', methods=['GET','POST'])
-def user_verification_and_registration():
-    pass
+@app.route('/user_login_signup', methods=['GET','POST'])
+def user_login_signup():
+    if request.method == "POST":
+        req = request.get_json()
+        user_req_res={}
+        
+        if req['login_flag']:
+            user_req_res=login_validate(req)
+            
+        elif req['sign_up_flag']:   
+            user_req_res=user_regestration(req)
+                       
+        elif req['reset_password_flag']:
+            user_req_res=reset_user_password(req['email'],req['new_pswrd']) 
+            
+        res = make_response(
+            jsonify({'Message': "Transformation has been done successfully","user_req_res":user_req_res}), 200)
+        return res
 
+@app.route('/<user_name>')
+def user(user_name):
+    return render_template('user.html',user_name=user_name)
+
+@app.route('/get_user_data', methods=['GET', 'POST'])
+def get_user_data():
+    if request.method == "POST":
+        req = request.get_json()
+
+        res = make_response(
+            jsonify({'Message': "Transformation has been done successfully",'user_data':get_user_data_by_username(req['username'])}), 200)
+        return res
+    
 @app.route('/update_example_files',methods=['GET', 'POST'])
 def update_examples():
     if request.method == "POST":
@@ -95,6 +126,7 @@ def apply_outpatient_department():
         res = make_response(
             jsonify({'Message': "Transformation has been done successfully","result":convert_np_to_native(res)}), 200)
         return res
+    
 @app.route('/apply_booking_system',methods=['GET', 'POST'])
 def apply_booking_system():
     if request.method == "POST":
