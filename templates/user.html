@@ -715,23 +715,25 @@
 		</div>
 
 		<div class="user-menu">
-			<div class="menu-header">
-				<span class="user-icon">M</span>
-				<div class="user-det">
-					<span>Mahmoud Z. Seyam</span>
-					<span>Mahmoud.Seyam.190717896</span>
+			<div class="menu-cont">
+				<div class="menu-header">
+					<span class="user-icon">M</span>
+					<div class="user-det">
+						<span>Mahmoud Z. Seyam</span>
+						<span>Mahmoud.Seyam.190717896</span>
+					</div>
 				</div>
+				<ul class="options">
+					<li>
+						<span class="material-symbols-outlined"> person </span>
+						<span>Profile</span>
+					</li>
+					<li id="logout_btn">
+						<span class="material-symbols-outlined">logout</span>
+						<span>Logout</span>
+					</li>
+				</ul>
 			</div>
-			<ul class="options">
-				<li>
-					<span class="material-symbols-outlined"> person </span>
-					<span>Profile</span>
-				</li>
-				<li id="logout_btn">
-					<span class="material-symbols-outlined">logout</span>
-					<span>Logout</span>
-				</li>
-			</ul>
 		</div>
 
 		<ul class="control_charts_graph_menu">
@@ -749,7 +751,9 @@
 
 		<div class="control_charts_graph_select"></div>
 
-		<div class="loader"></div>
+		<div class="loader">
+			<img src="./static/imgs/icons/fav_icon.svg" alt="" />
+		</div>
 
 		<script>
 			let username = "{{ user_name }}";

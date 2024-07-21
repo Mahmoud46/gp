@@ -234,6 +234,7 @@ function GetUserData(username) {
 }
 
 function SpreadUserData(user_data) {
+	document.querySelector(".loader").classList.add("active");
 	let user_menu = document.querySelector(".user-menu"),
 		user_menu_det = document.querySelectorAll(".user-det span");
 	user_menu.querySelector(".user-icon").innerText = user_data.fst_name[0];
@@ -245,4 +246,5 @@ function SpreadUserData(user_data) {
 		user_data.fst_name[0];
 
 	document.querySelector("#home_sec h1 span").innerText = user_data.fst_name;
+	document.querySelector(".loader").classList.remove("active");
 }

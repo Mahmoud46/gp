@@ -178,6 +178,7 @@ function ClearDataInputs() {
 }
 
 function UserLoginSignUp(data_ret) {
+	document.querySelector(".loader").classList.add("active");
 	fetch(`${window.origin}/user_login_signup`, {
 		method: "POST",
 		credentials: "include",
@@ -190,6 +191,7 @@ function UserLoginSignUp(data_ret) {
 		if (response.status !== 200) {
 			console.log(`Response status was not 200: ${response.status}`);
 			alert(`Response status was not 200: ${response.status}`);
+			document.querySelector(".loader").classList.remove("active");
 			return;
 		}
 		response.json().then((data) => {
@@ -212,6 +214,9 @@ function UserLoginSignUp(data_ret) {
 						"Sign up unsuccessful. The email address you entered is already in use. Please use a different email address."
 					);
 			} else if (user_data_ret.reset_password_flag) {
+				user_data_ret.reset_password_flag = false;
+				user_data_ret.sign_up_flag = false;
+				user_data_ret.login_flag = true;
 				if (user_req_res.reset_password_stat)
 					alert(
 						"Your password has been successfully changed. Please use your new password the next time you log in."
@@ -220,7 +225,9 @@ function UserLoginSignUp(data_ret) {
 					alert(
 						"The email address you entered does not exist in our system. Please check and try again."
 					);
+				ActivateLoginSignUpWindow();
 			}
+			document.querySelector(".loader").classList.remove("active");
 			return;
 		});
 	});
