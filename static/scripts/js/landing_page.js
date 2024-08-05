@@ -38,6 +38,20 @@ document.querySelector(".signup_btn").addEventListener("click", (_) => {
 	ActivateLoginSignUpWindow();
 });
 
+document.querySelector(".learn_more_btn").addEventListener("click", (_) => {
+	document.querySelector(".hero_section").classList.remove("active");
+	document.querySelector(".demo_section").classList.add("active");
+	document.querySelector(".close_about_section").classList.add("active");
+});
+
+document
+	.querySelector(".close_about_section")
+	.addEventListener("click", (_) => {
+		document.querySelector(".hero_section").classList.add("active");
+		document.querySelector(".demo_section").classList.remove("active");
+		document.querySelector(".close_about_section").classList.remove("active");
+	});
+
 login_signup_window
 	.querySelector(".login_field h1 a")
 	.addEventListener("click", (_) => {
@@ -103,6 +117,24 @@ document
 			e.preventDefault();
 			UserLoginSignUp(user_data_ret);
 		}
+	});
+
+// Features display
+document.querySelectorAll(".about_features .features_list li").forEach((fes) =>
+	fes.addEventListener("click", (_) => {
+		document.querySelector(".features_detailes").classList.add("active");
+		document
+			.querySelector(`.fes.${fes.getAttribute("feature_window")}`)
+			.classList.add("active");
+	})
+);
+
+// Remove features display
+document
+	.querySelector(".features_detailes .cls_fes_det_win")
+	.addEventListener("click", (_) => {
+		document.querySelector(".features_detailes").classList.remove("active");
+		document.querySelector(".fes.active")?.classList.remove("active");
 	});
 
 function ActivateLoginSignUpWindow() {

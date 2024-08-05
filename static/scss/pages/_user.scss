@@ -1183,24 +1183,49 @@ section {
 				width: 55%;
 				padding: 20px;
 				h1 {
-					font-size: 50px;
-					font-weight: 300;
-					position: relative;
-					&::before {
-						content: "";
-						position: absolute;
+					font-size: 42px;
+					text-align: center;
+					display: flex;
+					gap: 20px;
+					align-items: center;
+					justify-content: flex-start;
+					font-weight: 400;
+					color: rgba($color: $secondary-orange, $alpha: 1);
+					img {
 						width: 100px;
-						height: 4px;
-						border-radius: 2px;
-						bottom: -10px;
-						background: rgba($color: $secondary-orange, $alpha: 0.5);
+					}
+					span {
+						position: relative;
+						padding: 0 20px;
+						// text-align: center;
+						line-height: 42px;
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-start;
+						align-items: flex-start;
+						gap: 0;
+						line-height: 35px;
+
+						i {
+							font-size: 13px;
+							font-style: normal;
+							line-height: 20px;
+						}
+						&::before {
+							content: "";
+							position: absolute;
+							height: 100%;
+							width: 2px;
+							background: rgba($color: $secondary-orange, $alpha: 0.7);
+							left: 0;
+						}
 					}
 				}
 				p {
 					font-size: 16px;
-					color: rgba($color: $secondary-orange, $alpha: 0.8);
-					width: 80%;
-					padding-left: 20px;
+					color: rgba($color: $secondary-orange, $alpha: 1);
+					width: 90%;
+					// padding-left: 20px;
 					b {
 						color: $secondary-orange;
 					}
@@ -1745,24 +1770,49 @@ section {
 				width: 55%;
 				padding: 20px;
 				h1 {
-					font-size: 40px;
-					font-weight: 300;
-					position: relative;
-					&::before {
-						content: "";
-						position: absolute;
+					font-size: 42px;
+					text-align: center;
+					display: flex;
+					gap: 20px;
+					align-items: center;
+					justify-content: flex-start;
+					font-weight: 400;
+					color: rgba($color: $secondary-orange, $alpha: 1);
+					img {
 						width: 100px;
-						height: 4px;
-						border-radius: 2px;
-						bottom: -15px;
-						background: rgba($color: $secondary-orange, $alpha: 0.5);
+					}
+					span {
+						position: relative;
+						padding: 0 20px;
+						// text-align: center;
+						line-height: 42px;
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-start;
+						align-items: flex-start;
+						gap: 0;
+						line-height: 35px;
+
+						i {
+							font-size: 13px;
+							font-style: normal;
+							line-height: 20px;
+						}
+						&::before {
+							content: "";
+							position: absolute;
+							height: 100%;
+							width: 2px;
+							background: rgba($color: $secondary-orange, $alpha: 0.7);
+							left: 0;
+						}
 					}
 				}
 				p {
 					font-size: 16px;
-					color: rgba($color: $secondary-orange, $alpha: 0.8);
-					width: 80%;
-					padding-left: 20px;
+					color: rgba($color: $secondary-orange, $alpha: 1);
+					width: 90%;
+					// padding-left: 20px;
 					b {
 						color: $secondary-orange;
 					}
@@ -2494,24 +2544,49 @@ section {
 				width: 55%;
 				padding: 20px;
 				h1 {
-					font-size: 40px;
-					font-weight: 300;
-					position: relative;
-					&::before {
-						content: "";
-						position: absolute;
+					font-size: 42px;
+					text-align: center;
+					display: flex;
+					gap: 20px;
+					align-items: center;
+					justify-content: flex-start;
+					font-weight: 400;
+					color: rgba($color: $secondary-orange, $alpha: 1);
+					img {
 						width: 100px;
-						height: 4px;
-						border-radius: 2px;
-						bottom: -15px;
-						background: rgba($color: $secondary-orange, $alpha: 0.5);
+					}
+					span {
+						position: relative;
+						padding: 0 20px;
+						// text-align: center;
+						line-height: 42px;
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-start;
+						align-items: flex-start;
+						gap: 0;
+						line-height: 35px;
+
+						i {
+							font-size: 13px;
+							font-style: normal;
+							line-height: 20px;
+						}
+						&::before {
+							content: "";
+							position: absolute;
+							height: 100%;
+							width: 2px;
+							background: rgba($color: $secondary-orange, $alpha: 0.7);
+							left: 0;
+						}
 					}
 				}
 				p {
 					font-size: 16px;
-					color: rgba($color: $secondary-orange, $alpha: 0.8);
-					width: 80%;
-					padding-left: 20px;
+					color: rgba($color: $secondary-orange, $alpha: 1);
+					width: 90%;
+					// padding-left: 20px;
 					b {
 						color: $secondary-orange;
 					}
@@ -3035,7 +3110,7 @@ section {
 						}
 						.main_summary {
 							p {
-								font-size: 14px;
+								font-size: 15px;
 								color: rgba($color: $secondary-orange, $alpha: 0.7);
 								i {
 									color: rgba($color: $secondary-orange, $alpha: 0.8);
@@ -3150,7 +3225,7 @@ section {
 					}
 					.clinics_body {
 						width: 100%;
-						height: 70%;
+						height: 65%;
 						display: flex;
 						justify-content: center;
 						align-items: flex-start;
@@ -3290,6 +3365,22 @@ section {
 								}
 								// backgrou
 							}
+
+							.cl_sum {
+								display: flex;
+								flex-direction: column;
+								gap: 5px;
+								ul {
+									display: flex;
+									flex-direction: column;
+
+									padding: 10px 20px;
+									li {
+										list-style: none;
+										margin-bottom: 10px;
+									}
+								}
+							}
 						}
 						.simulation_graphs {
 							width: 0;
@@ -3304,6 +3395,7 @@ section {
 								font-size: 20px;
 							}
 							p {
+								font-size: 15px;
 								color: rgba($color: $secondary-orange, $alpha: 0.7);
 								b {
 									color: rgba($color: $secondary-orange, $alpha: 1);
@@ -3388,52 +3480,54 @@ section {
 					// opacity: 0.8;
 				}
 				button {
-					border: none;
 					background: none;
-					outline: none;
-					cursor: pointer;
-					color: $secondary-orange;
-					// background: red;
-					padding: 10px;
 					display: flex;
+					gap: 10px;
+					justify-content: center;
 					align-items: center;
-					gap: 20px;
-					font-size: 16px;
-					position: relative;
+					padding: 10px;
+					border: none;
+					outline: none;
+					// background: $secondary-dark;
+					border-radius: 20px;
 					cursor: pointer;
-					transition: 0.5s ease-in-out all;
+					position: relative;
+
 					span {
 						color: $secondary-orange;
-						font-size: 26px;
 						transition: 0.5s ease-in-out all;
-						&.material-symbols-outlined {
-							font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
-						}
+					}
+
+					.material-symbols-outlined {
+						color: $primary-dark;
+						font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
 					}
 
 					&::after {
 						content: "";
 						position: absolute;
-						background: $secondary-dark;
-						height: 100%;
-						width: 100%;
+						width: 40px;
+						height: 40px;
+						background: $secondary-orange;
 						z-index: -1;
 						right: 0;
-						transition: 0.5s ease-in-out all;
-						border-radius: 30px;
-						height: 45px;
-						width: 45px;
+						border-radius: 20px;
+						transition: 0.5s ease-in-out width;
 					}
+
 					&:hover {
-						color: $secondary-dark;
+						color: $primary-dark;
+
 						&::after {
 							width: 100%;
-							background: $secondary-orange;
+							border-radius: 20px;
 						}
-						span {
-							color: $secondary-dark;
 
-							rotate: 45deg;
+						span {
+							color: $primary-dark;
+							&:last-child {
+								rotate: 45deg;
+							}
 						}
 					}
 				}

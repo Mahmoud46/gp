@@ -2,7 +2,7 @@ let control_charts_workspace_opened = false,
 	hospital_comparison_workspace_opened = false,
 	outpatient_department_workspace_opened = false;
 
-GetUserData(username);
+// GetUserData(username);
 // Main menu buttons activation
 document.querySelectorAll(".main-menu li").forEach((li) => {
 	li.addEventListener("click", (_) => {

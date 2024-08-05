@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return render_template('main.html')
+    return render_template('index.html')
 
 @app.route('/user_login_signup', methods=['GET','POST'])
 def user_login_signup():
