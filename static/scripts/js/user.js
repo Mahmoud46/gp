@@ -2,7 +2,7 @@ let control_charts_workspace_opened = false,
 	hospital_comparison_workspace_opened = false,
 	outpatient_department_workspace_opened = false;
 
-// GetUserData(username);
+GetUserData(username);
 // Main menu buttons activation
 document.querySelectorAll(".main-menu li").forEach((li) => {
 	li.addEventListener("click", (_) => {
@@ -93,6 +93,26 @@ document.getElementById("logout_btn").addEventListener("click", (_) => {
 	// Optionally, close the current tab/window
 	window.close();
 });
+
+// Remove features display
+document
+	.querySelector(".features_detailes .cls_fes_det_win")
+	.addEventListener("click", (_) => {
+		document.querySelector(".features_detailes").classList.remove("active");
+		document.querySelector(".fes.active")?.classList.remove("active");
+	});
+
+// Features display
+document
+	.querySelectorAll("#about_sec .about_features .features_list li")
+	.forEach((fes) =>
+		fes.addEventListener("click", (_) => {
+			document.querySelector(".features_detailes").classList.add("active");
+			document
+				.querySelector(`.fes.${fes.getAttribute("feature_window")}`)
+				.classList.add("active");
+		})
+	);
 
 // Activate selected section when click main menu button
 function activateSection(sec_id) {
