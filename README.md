@@ -43,4 +43,4 @@
   <li>SciPy </li>
 </ul>
 <h2>Note</h2>
-<p>For more information about the project, <a href='https://mahmoud46.github.io/Nexira/'>Click here!</a></p>
+<p>For additional details about the project, <a href='https://mahmoud46.github.io/Nexira/'>please click here!</a></p>
