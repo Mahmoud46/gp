@@ -30,17 +30,5 @@
   </ol>
   <li>Comparative Analysis of Hospitals: Compare performance metrics, resource utilization, and patient outcomes across different hospitals to identify best practices and areas for improvement.</li>
 </ol>
-<h2>Tools</h2>
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JavaScript</li>
-  <li>Sass</li>
-  <li>Plotly js</li>
-  <li>Flask</li>
-  <li>Numpy</li>
-  <li>Pandas</li>
-  <li>SciPy </li>
-</ul>
 <h2>Note</h2>
 <p>For additional details about the project, <a href='https://mahmoud46.github.io/Nexira/'>please click here!</a></p>
