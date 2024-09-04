@@ -32,3 +32,5 @@
 </ol>
 <h2>Note</h2>
 <p>For additional details about the project, <a href='https://mahmoud46.github.io/Nexira/'>please click here!</a></p>
+<h3>Run</h3>
+<code>python run.py</code>
