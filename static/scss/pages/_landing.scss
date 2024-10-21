@@ -223,6 +223,7 @@
 		}
 	}
 }
+
 section {
 	position: absolute;
 	&.hero_section {
@@ -620,6 +621,7 @@ section {
 		}
 	}
 }
+
 .lan_menu {
 	position: absolute;
 	top: 50%;
@@ -746,6 +748,7 @@ section {
 		}
 	}
 }
+
 .features_detailes {
 	background: $secondary-orange;
 	position: absolute;
@@ -799,6 +802,7 @@ section {
 			align-items: center;
 			justify-content: center;
 			font-weight: 400;
+			margin-bottom: 20px;
 			color: rgba($color: $secondary-orange, $alpha: 1);
 			span {
 				position: relative;

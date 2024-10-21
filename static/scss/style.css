@@ -4459,6 +4459,7 @@ section.demo_section .team_info ul li:nth-child(3) {
   align-items: center;
   justify-content: center;
   font-weight: 400;
+  margin-bottom: 20px;
   color: #f2dabf;
 }
 .features_detailes .detailes_container h1 span {

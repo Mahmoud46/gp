@@ -20,6 +20,23 @@ document.querySelector(".cls_lgn_su_win").addEventListener("click", (_) => {
 	ClearDataInputs();
 });
 
+// Paper
+document.querySelector(".download_paper").addEventListener("click", (_) => {
+	let a = document.createElement("a");
+	a.href = "./static/pdf/Management Support to Hospital Administration.pdf";
+	a.download =
+		"Graduation Project - Paper - Management Support to Hospital Administration.pdf";
+	a.click();
+});
+
+// Code
+document.querySelector(".rev_code").addEventListener("click", (_) => {
+	let a = document.createElement("a");
+	a.href = "https://github.com/Mahmoud46/Graduation-Project-Demo";
+	a.target = "_blank";
+	a.click();
+});
+
 document.querySelector(".login_btn").addEventListener("click", (_) => {
 	user_data_ret.login_flag = true;
 	user_data_ret.sign_up_flag = false;
