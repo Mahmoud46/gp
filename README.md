@@ -1,5 +1,7 @@
 <p align="center"><img src="https://github.com/user-attachments/assets/90ed48f0-1577-429e-8c36-a3dd2b36e6ab" width=200></p>
 <h1 align="center">Management Support to Hospital Administration</h1>
+
+<p align="center"><img src="static\videos\nexira_video.gif"></p>
 <p align="center"><img width=600 src="https://github.com/user-attachments/assets/ef29ac82-c143-4317-a793-f681df4bfa0b"></p>
 <h2>Team</h2>
 <h3>Team Members</h3>
