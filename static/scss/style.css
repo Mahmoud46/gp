@@ -3175,7 +3175,7 @@ section#about_sec .demo_display .demo .demo_cont img {
   width: 100%;
   position: absolute;
 }
-section#about_sec .demo_display .demo .demo_cont video {
+section#about_sec .demo_display .demo .demo_cont .screenshot {
   top: 9px;
   left: 90px;
   width: 74%;
@@ -4121,7 +4121,7 @@ section.demo_section .demo_display .demo .demo_cont img {
   width: 100%;
   position: absolute;
 }
-section.demo_section .demo_display .demo .demo_cont video {
+section.demo_section .demo_display .demo .demo_cont .screenshot {
   top: 9px;
   left: 90px;
   width: 74%;
