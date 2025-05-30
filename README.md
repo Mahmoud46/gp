@@ -38,7 +38,7 @@ This project aims to develop a comprehensive management support system tailored 
 
 ## Note
 
-For additional details about the project, [please click here!](https://mahmoud46.github.io/Nexira/)
+For additional details about the project, [please click here!](https://mahmoud46.github.io/nexira/)
 
 ### Run
 
